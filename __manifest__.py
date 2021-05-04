@@ -5,7 +5,11 @@
     'description' : 'XYZ Uni (manifest,description)',
     'depends' : ['base'],
     'data' : [
-
+        'views/course_views.xml',
+        'views/department_views.xml',
+        'views/faculty_views.xml',
+        'views/staff_views.xml',
+        'views/student.views.xml',
     ],
     'installable' : True,
     'application' : True,
