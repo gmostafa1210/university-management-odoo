@@ -1,8 +1,8 @@
 {
-    'name' : 'University Management (manifest,name)',
+    'name' : 'XYZ Uni (manifest,name)',
     'version' : '1.0',
     'sequence' : 5,
-    'description' : 'University Management Description (manifest)',
+    'description' : 'XYZ Uni (manifest,description)',
     'depends' : ['base'],
     'data' : [
 
