@@ -1,6 +1,7 @@
 {
     'name' : 'XYZ Uni (manifest,name)',
     'version' : '1.0',
+    'summary': 'University Management',
     'sequence' : 5,
     'description' : 'XYZ Uni (manifest,description)',
     'depends' : ['base'],
