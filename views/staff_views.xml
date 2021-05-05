@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id='action_staff' model='ir.actions.act_window'>
+        <field name='name'>Staff</field>
+        <field name='res_model'>uni.staff</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_staff' 
+        action='action_staff' 
+        name='Staff'
+        parent='menu_university_main'/>
+
 </odoo>
