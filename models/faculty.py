@@ -12,4 +12,4 @@ class UniFaculty(models.Model):
                                 ('lecturer', 'Lecturer'),
                                 ('adjunct_faculty', 'Adjunct Faculty')], 
                                 default='lecturer')
-    # photo = fields.Binary(string="Photo", attachment=True)
+    photo = fields.Binary(string="Photo", attachment=True)

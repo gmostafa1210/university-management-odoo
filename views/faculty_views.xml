@@ -8,7 +8,12 @@
     </record>
     
     <menuitem 
+        id='menu_university_main'
+        name='XYZ University'/>
+
+    <menuitem 
         id='menu_faculty' 
         action='action_faculty' 
-        name='Faculty m'/>
+        name='Faculty m'
+        parent='menu_university_main'/>
 </odoo>
