@@ -23,7 +23,7 @@
                             <field name='salary'/>
                         </group>
                         <group>
-                            <field name='photo'/>
+                            <field name='photo' widget='image' class='oe_avatar'/>
                         </group>
                     </group>
                 </sheet>
