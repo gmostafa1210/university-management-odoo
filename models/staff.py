@@ -6,4 +6,5 @@ class UniStaff(models.Model):
 
     name = fields.Char(string='Staff Name')
     salary = fields.Float(string='Salary')
+    department = fields.Char(string='Department')
     photo = fields.Binary(string='Photo', attachment=True)

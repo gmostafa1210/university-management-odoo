@@ -20,6 +20,7 @@
                     <group>
                         <group>
                             <field name='name'/>
+                            <field name='department'/>
                             <field name='salary'/>
                         </group>
                         <group>
