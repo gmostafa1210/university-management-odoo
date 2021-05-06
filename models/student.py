@@ -7,6 +7,6 @@ class UniStudent(models.Model):
     name = fields.Char(string='Student Name')
     stu_id = fields.Char(string='student ID')
     department = fields.Char(string='Department')
-    credi_earn = fields.Integer(string='Credit Earned')
+    credit_earn = fields.Integer(string='Credit Earned')
     course_taken = fields.Char(string='Ongoing Courses')
     photo = fields.Binary(string="Photo", attachment=True)
