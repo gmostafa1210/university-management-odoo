@@ -12,4 +12,20 @@
         </field>
     </record>
 
+    <record id='view_department_form' model='ir.ui.view'>
+        <field name='name'>uni.department.form</field>
+        <field name='model'>uni.department</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <field name='name'/>
+                        <field name='budget'/>
+                        <field name='faculty_list'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
 </odoo>

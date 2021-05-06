@@ -13,4 +13,25 @@
         </field>
     </record>
 
+    <record id='view_course_form' model='ir.ui.view'>
+        <field name='name'>uni.course.form</field>
+        <field name='model'>uni.course</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='name'/>
+                            <field name='course_code'/>
+                            <field name='credit'/>
+                        </group>
+                        <group>
+                            <field name='course_description'/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
 </odoo>

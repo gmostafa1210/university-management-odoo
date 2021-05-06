@@ -11,4 +11,24 @@
         </field>
     </record>
 
+        <record id='view_staff_form' model='ir.ui.view'>
+        <field name='name'>uni.staff.form</field>
+        <field name='model'>uni.staff</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='name'/>
+                            <field name='salary'/>
+                        </group>
+                        <group>
+                            <field name='photo'/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
 </odoo>
