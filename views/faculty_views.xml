@@ -13,20 +13,4 @@
         </field>
     </record>
 
-    <record id='action_faculty' model='ir.actions.act_window'>
-        <field name='name'>Faculty r</field>
-        <field name='res_model'>uni.faculty</field>
-        <field name='view_mode'>tree,form</field>
-    </record>
-
-    <menuitem 
-        id='menu_faculty' 
-        action='action_faculty' 
-        name='Faculty m'
-        parent='menu_university_main'/>
-    
-    <menuitem 
-        id='menu_university_main'
-        name='XYZ University'/>
-
 </odoo>

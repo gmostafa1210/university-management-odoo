@@ -13,16 +13,4 @@
         </field>
     </record>
 
-    <record id='action_course' model='ir.actions.act_window'>
-        <field name='name'>Course</field>
-        <field name='res_model'>uni.course</field>
-        <field name='view_mode'>tree,form</field>
-    </record>
-
-    <menuitem 
-        id='menu_course'
-        action='action_course'
-        name='Course'
-        parent='menu_university_main'/>
-
 </odoo>

@@ -11,6 +11,7 @@
         'views/faculty_views.xml',
         'views/staff_views.xml',
         'views/student_views.xml',
+        'views/university_views.xml'
     ],
     'installable' : True,
     'application' : True,

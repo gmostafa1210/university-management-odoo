@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <menuitem 
+        id='menu_university_main'
+        name='XYZ University'/>
+
+    <menuitem 
+        id='menu_faculty' 
+        action='action_faculty' 
+        name='Faculty m'
+        parent='menu_university_main'/>
+
+    <record id='action_faculty' model='ir.actions.act_window'>
+        <field name='name'>Faculty r</field>
+        <field name='res_model'>uni.faculty</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_student' 
+        action='action_student' 
+        name='Student'
+        parent='menu_university_main'/>
+
+    <record id='action_student' model='ir.actions.act_window'>
+        <field name='name'>Student</field>
+        <field name='res_model'>uni.student</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_department' 
+        action='action_department' 
+        name='Department'
+        parent='menu_university_main'/>
+
+    <record id='action_department' model='ir.actions.act_window'>
+        <field name='name'>Department</field>
+        <field name='res_model'>uni.department</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_staff' 
+        action='action_staff' 
+        name='Staff'
+        parent='menu_university_main'/>
+
+    <record id='action_staff' model='ir.actions.act_window'>
+        <field name='name'>Staff</field>
+        <field name='res_model'>uni.staff</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_course'
+        action='action_course'
+        name='Course'
+        parent='menu_university_main'/>
+
+    <record id='action_course' model='ir.actions.act_window'>
+        <field name='name'>Course</field>
+        <field name='res_model'>uni.course</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+</odoo>
