@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id='view_staff_tree' model='ir.ui.view'>
+        <field name='name'>uni.staff.tree</field>
+        <field name='model'>uni.staff</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name='name'/>
+            </tree>
+        </field>
+    </record>
+
     <record id='action_staff' model='ir.actions.act_window'>
         <field name='name'>Staff</field>
         <field name='res_model'>uni.staff</field>

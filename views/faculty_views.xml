@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id='view_faculty_tree' model='ir.ui.view'>
+        <field name='name'>uni.faculty.tree</field>
+        <field name='model'>uni.faculty</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name='name'/>
+                <field name='dept_name'/>
+                <field name='designation'/>
+            </tree>
+        </field>
+    </record>
+
     <record id='action_faculty' model='ir.actions.act_window'>
         <field name='name'>Faculty r</field>
         <field name='res_model'>uni.faculty</field>
         <field name='view_mode'>tree,form</field>
     </record>
-    
-    <menuitem 
-        id='menu_university_main'
-        name='XYZ University'/>
 
     <menuitem 
         id='menu_faculty' 
         action='action_faculty' 
         name='Faculty m'
         parent='menu_university_main'/>
+    
+    <menuitem 
+        id='menu_university_main'
+        name='XYZ University'/>
+
 </odoo>

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id='view_student_tree' model='ir.ui.view'>
+        <field name='name'>uni.student.tree</field>
+        <field name='model'>uni.student</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name='name'/>
+                <field name='stu_id'/>
+                <field name='department'/>
+            </tree>
+        </field>
+    </record>
+
     <record id='action_student' model='ir.actions.act_window'>
         <field name='name'>Student</field>
         <field name='res_model'>uni.student</field>
