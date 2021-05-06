@@ -6,7 +6,7 @@
         <field name='model'>uni.course</field>
         <field name='arch' type='xml'>
             <tree>
-                <field name='name'/>
+                <field name='course_name'/>
                 <field name='credit'/>
                 <field name='course_code'/>
             </tree>
@@ -21,7 +21,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name='name'/>
+                            <field name='course_name'/>
                             <field name='course_code'/>
                             <field name='credit'/>
                         </group>
