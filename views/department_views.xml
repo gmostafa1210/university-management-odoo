@@ -21,7 +21,7 @@
                     <group>
                         <field name='name'/>
                         <field name='budget'/>
-                        <field name='faculty_id'/>
+                        <field name='faculty_id' widget='many2many_tags'/>
                     </group>
                 </sheet>
             </form>
