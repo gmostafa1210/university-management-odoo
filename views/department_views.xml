@@ -21,7 +21,7 @@
                     <group>
                         <field name='name'/>
                         <field name='budget'/>
-                        <field name='faculty_list'/>
+                        <field name='faculty_id'/>
                     </group>
                 </sheet>
             </form>

@@ -5,7 +5,7 @@ class UniFaculty(models.Model):
     _description = 'Faculty Information c'
 
     name = fields.Char(string='Faculty Name')
-    dept_name = fields.Char(string='Department')
+    department_id = fields.Many2one('uni.department', string='Department')
     salary = fields.Float(String='Salary')
     course_id = fields.Char(string='Courses')
     designation = fields.Selection([('professor', 'Professor'), 

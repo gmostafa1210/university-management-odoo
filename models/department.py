@@ -6,4 +6,4 @@ class UniDepartment(models.Model):
 
     name = fields.Char(string='Department Name')
     budget = fields.Float(string='Department Budget')
-    faculty_list = fields.Char(string='Faculty List')
+    faculty_id = fields.One2many('uni.faculty', 'department_id', string='Faculty List')

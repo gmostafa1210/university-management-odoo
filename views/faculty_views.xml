@@ -7,7 +7,7 @@
         <field name='arch' type='xml'>
             <tree>
                 <field name='name'/>
-                <field name='dept_name'/>
+                <field name='department_id'/>
                 <field name='designation'/>
             </tree>
         </field>
@@ -22,7 +22,7 @@
                     <group>
                         <group>
                             <field name='name'/>
-                            <field name='dept_name'/>
+                            <field name='department_id'/>
                             <field name='salary'/>
                             <field name='designation'/>
                         </group>
