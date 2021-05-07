@@ -23,6 +23,7 @@
                         <field name='budget'/>
                         <field name='faculty_ids'/>
                         <field name='student_ids'/>
+                        <field name='staff_ids'/>
                     </group>
                 </sheet>
             </form>
