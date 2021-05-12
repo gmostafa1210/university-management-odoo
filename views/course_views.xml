@@ -7,7 +7,7 @@
         <field name='arch' type='xml'>
             <tree>
                 <field name='course_name'/>
-                <field name='credit'/>
+                <field name='credit_hour'/>
                 <field name='course_code'/>
             </tree>
         </field>
@@ -23,7 +23,8 @@
                         <group>
                             <field name='course_name'/>
                             <field name='course_code'/>
-                            <field name='credit'/>
+                            <field name='credit_hour'/>
+                            <field name='have_lab'/>
                         </group>
                         <group>
                             <field name='course_description'/>
