@@ -20,7 +20,7 @@ class UniCourse(models.Model):
             return super(UniCourse, self).create(values)
     
     def write(self, values):
-        if values['credit_hour']:
+        if 'credit_hour' in values.keys():
             if values['credit_hour'] != 3 and values['credit_hour'] != 4:
                 raise UserError(_('Invalid input. Please input 3 or 4.'))
             else:
