@@ -16,15 +16,13 @@ class UniCourse(models.Model):
     def create(self, values):
         if values['credit_hour'] != 3 and values['credit_hour'] != 4:
             raise UserError(_('Invalid input. Please input 3 or 4.'))
-        else:
-            return super(UniCourse, self).create(values)
-    
+        return super(UniCourse, self).create(values)
+
     def write(self, values):
         if 'credit_hour' in values.keys():
             if values['credit_hour'] != 3 and values['credit_hour'] != 4:
                 raise UserError(_('Invalid input. Please input 3 or 4.'))
-            else:
-                return super(UniCourse, self).write(values)
+        return super(UniCourse, self).write(values)
 
     @api.onchange('credit_hour')
     def lab_assign(self):
