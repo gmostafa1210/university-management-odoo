@@ -16,15 +16,18 @@ class UniFaculty(models.Model):
                                 default='lecturer')
     photo = fields.Binary(string="Photo", attachment=True)
 
-    def _get_full_name(self):
+    def full_name(self):
         first_name = ''
         last_name = ''
-        for item in self:
-            if item.first_name:
-                first_name = item.first_name
-            if item.last_name:
-                last_name = item.last_name
+        if self.first_name:
+            first_name = self.first_name
+        if self.last_name:
+            last_name = self.last_name
 
-            item.name = first_name + ' ' + last_name
+        return first_name + ' ' + last_name
+        
+    def _get_full_name(self):
+        for item in self:
+            item.name = item.full_name()
 
     
