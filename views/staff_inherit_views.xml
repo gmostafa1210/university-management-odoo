@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='view_staff_form_inherit' model='ir.ui.view'>
+        <field name='name'>uni.staff.inherit</field>
+        <field name='model'>uni.staff</field>
+        <field name='inherit_id' ref='university_management.view_staff_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//field[@name="photo"]' position='before'>
+                <field name='address'/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

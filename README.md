@@ -1,5 +1,7 @@
 # University Management
 
+35 > 1f7547a > compute field updated in faculty in different function
+
 34 > c82a4e1 > compute field updated in faculty
 
 33 > 720ec10 > README.md added to keep track
