@@ -1,9 +1,9 @@
 {
-    'name' : 'XYZ Uni (manifest,name)',
+    'name' : 'XYZ University',
     'version' : '1.0',
     'summary': 'University Management',
     'sequence' : 5,
-    'description' : 'XYZ Uni (manifest,description)',
+    'description' : 'XYZ University description.',
     'depends' : ['base'],
     'data' : [
         'views/course_views.xml',
