@@ -5,16 +5,22 @@
         id='menu_university_main'
         name='XYZ University'/>
 
+    <record id='action_faculty' model='ir.actions.act_window'>
+        <field name='name'>Faculty</field>
+        <field name='res_model'>uni.faculty</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
     <menuitem 
         id='menu_faculty' 
         action='action_faculty' 
-        name='Faculty m'
+        name='Faculty'
         parent='menu_university_main'
         sequence='1'/>
 
-    <record id='action_faculty' model='ir.actions.act_window'>
-        <field name='name'>Faculty r</field>
-        <field name='res_model'>uni.faculty</field>
+    <record id='action_student' model='ir.actions.act_window'>
+        <field name='name'>Student</field>
+        <field name='res_model'>uni.student</field>
         <field name='view_mode'>tree,form</field>
     </record>
 
@@ -25,9 +31,9 @@
         parent='menu_university_main'
         sequence='2'/>
 
-    <record id='action_student' model='ir.actions.act_window'>
-        <field name='name'>Student</field>
-        <field name='res_model'>uni.student</field>
+    <record id='action_department' model='ir.actions.act_window'>
+        <field name='name'>Department</field>
+        <field name='res_model'>uni.department</field>
         <field name='view_mode'>tree,form</field>
     </record>
 
@@ -38,9 +44,9 @@
         parent='menu_university_main'
         sequence='3'/>
 
-    <record id='action_department' model='ir.actions.act_window'>
-        <field name='name'>Department</field>
-        <field name='res_model'>uni.department</field>
+    <record id='action_staff' model='ir.actions.act_window'>
+        <field name='name'>Staff</field>
+        <field name='res_model'>uni.staff</field>
         <field name='view_mode'>tree,form</field>
     </record>
 
@@ -51,9 +57,9 @@
         parent='menu_university_main'
         sequence='4'/>
 
-    <record id='action_staff' model='ir.actions.act_window'>
-        <field name='name'>Staff</field>
-        <field name='res_model'>uni.staff</field>
+    <record id='action_course' model='ir.actions.act_window'>
+        <field name='name'>Course</field>
+        <field name='res_model'>uni.course</field>
         <field name='view_mode'>tree,form</field>
     </record>
 
@@ -63,11 +69,5 @@
         name='Course'
         parent='menu_university_main'
         sequence='5'/>
-
-    <record id='action_course' model='ir.actions.act_window'>
-        <field name='name'>Course</field>
-        <field name='res_model'>uni.course</field>
-        <field name='view_mode'>tree,form</field>
-    </record>
 
 </odoo>
