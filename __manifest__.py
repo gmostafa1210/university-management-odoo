@@ -4,7 +4,7 @@
     'summary': 'University Management',
     'sequence' : 5,
     'description' : 'XYZ University description.',
-    'depends' : ['base'],
+    'depends' : ['base','sale'],
     'data' : [
         'views/course_views.xml',
         'views/department_views.xml',
@@ -13,6 +13,7 @@
         'views/student_views.xml',
         'views/university_views.xml',
         'views/staff_inherit_views.xml',
+        'views/sale_inherit_views.xml',
     ],
     'installable' : True,
     'application' : True,
