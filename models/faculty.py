@@ -9,12 +9,13 @@ class UniFaculty(models.Model):
     name = fields.Char(string='Full Name', compute='_get_full_name')
     department_id = fields.Many2one('uni.department', string='Department')
     salary = fields.Float(String='Salary')
-    course_id = fields.Char(string='Courses')
     designation = fields.Selection([('professor', 'Professor'), 
                                 ('lecturer', 'Lecturer'),
                                 ('adjunct_faculty', 'Adjunct Faculty')], 
                                 default='lecturer')
     photo = fields.Binary(string="Photo", attachment=True)
+
+    course_ids = fields.Many2many('uni.course', string='Courses')
 
     def full_name(self):
         first_name = ''
