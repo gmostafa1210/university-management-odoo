@@ -17,7 +17,7 @@
         <field name='arch' type='xml'>
             <form>
                 <header>
-                    <button string='Error Raise' type='object' name='test_user_error'/>
+                    <button string='Error Raise' type='object' name='test_user_error' class='btn btn-danger'/>
                 </header>
                 <sheet>
                     <group>
