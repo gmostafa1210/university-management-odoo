@@ -18,13 +18,30 @@
         <field name='arch' type='xml'>
             <form>
                 <sheet>
+
                     <group>
                         <field name='name'/>
                         <field name='budget'/>
-                        <field name='faculty_ids'/>
-                        <field name='student_ids'/>
-                        <field name='staff_ids'/>
                     </group>
+
+                    <notebook>
+                        <page string='Faculty'>
+                            <group string='Faculty List'>
+                                <field name='faculty_ids'/>
+                            </group>
+                        </page>
+                        <page string='Student'>
+                            <group string='Student List'>
+                                <field name='student_ids'/>
+                            </group>
+                        </page>
+                        <page string='Staff'>
+                            <group string='Staff List'>
+                                <field name='staff_ids'/>
+                            </group>
+                        </page>
+                    </notebook>
+
                 </sheet>
             </form>
         </field>
