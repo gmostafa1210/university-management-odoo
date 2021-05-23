@@ -1,5 +1,29 @@
 # University Management
 
+47 > 81f9520 > search view added
+
+46 > 67de888 > internal reference become product reference and required in products using xpath
+
+45 > 63084c4 > product brand and dealer name added after barcode in product
+
+44 > 5516156 > button updated by adding danger class
+
+43 > 6e3eb95 > object type button implemented in staff to raise an error
+
+42 > 96e9e0a > notepad and page added to department
+
+41 > ab4a7c1 > many2many relation created between faculty and department
+
+40 > 1ea2fca > customer reference after online payment is hidden using attribute in xpath
+
+39 > 496f15d > customer notes added on sale by inherit and xpath
+
+38 > 82f0c86 > manifest updated
+
+37 > 48fa84a > menuitem and record updated in university_views.xml
+
+36 > fcdf5a8 > inherit and xpath used to add address in staff
+
 35 > 1f7547a > compute field updated in faculty in different function
 
 34 > c82a4e1 > compute field updated in faculty
