@@ -35,4 +35,16 @@
         </field>
     </record>
 
+    <record id='view_course_search' model='ir.ui.view'>
+        <field name='name'>uni.course.search</field>
+        <field name='model'>uni.course</field>
+        <field name='arch' type='xml'>
+            <search>
+                <field name='course_name'/>
+                <field name='credit_hour'/>
+                <field name='course_code'/>
+            </search>
+        </field>
+    </record>
+
 </odoo>

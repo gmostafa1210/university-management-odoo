@@ -35,4 +35,15 @@
         </field>
     </record>
 
+    <record id='view_staff_search' model='ir.ui.view'>
+        <field name='name'>uni.staff.search</field>
+        <field name='model'>uni.staff</field>
+        <field name='arch' type='xml'>
+            <search>
+                <field name='name'/>
+                <field name='salary'/>
+            </search>
+        </field>
+    </record>
+
 </odoo>

@@ -5,7 +5,7 @@ class UniStudent(models.Model):
     _description = 'Student Information'
 
     name = fields.Char(string='Student Name')
-    stu_num = fields.Char(string='Student ID')
+    stu_id_num = fields.Char(string='Student ID')
     department_id = fields.Many2one('uni.department', string='Department')
     credit_earn = fields.Integer(string='Credit Earned')
     course_ids = fields.Many2many('uni.course', string='Courses')

@@ -47,4 +47,15 @@
         </field>
     </record>
 
+    <record id='view_department_search' model='ir.ui.view'>
+        <field name='name'>uni.department.search</field>
+        <field name='model'>uni.department</field>
+        <field name='arch' type='xml'>
+            <search>
+                <field name='name'/>
+                <field name='budget'/>
+            </search>
+        </field>
+    </record>
+
 </odoo>

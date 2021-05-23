@@ -38,4 +38,19 @@
         </field>
     </record>
 
+    <record id='view_faculty_search' model='ir.ui.view'>
+        <field name='name'>uni.faculty.search</field>
+        <field name='model'>uni.faculty</field>
+        <field name='arch' type='xml'>
+            <search>
+                <field name='first_name'/>
+                <field name='last_name'/>
+                <field name='name'/>
+                <field name='department_id'/>
+                <field name='designation'/>
+                <field name='salary'/>
+            </search>
+        </field>
+    </record>
+
 </odoo>
