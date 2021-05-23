@@ -9,6 +9,9 @@
             <xpath expr='//field[@name="payment_term_id"]' position='before'>
                 <field name='customer_notes'/>
             </xpath>
+            <xpath expr='//field[@name="client_order_ref"]' position='attributes'>
+                <attribute name='invisible'>1</attribute>
+            </xpath>
         </field>
     </record>
 
