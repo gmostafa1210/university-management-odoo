@@ -14,6 +14,7 @@
         'views/university_views.xml',
         'views/staff_inherit_views.xml',
         'views/sale_inherit_views.xml',
+        'views/sale_product_inherit_views.xml',
     ],
     'installable' : True,
     'application' : True,

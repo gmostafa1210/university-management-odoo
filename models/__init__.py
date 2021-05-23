@@ -5,3 +5,5 @@ from . import staff
 from . import student
 from . import staff_inherit
 from . import sale_inherit
+from . import sale_product_inherit
+from . import brand_dealer
