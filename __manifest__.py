@@ -4,7 +4,7 @@
     'summary': 'University Management',
     'sequence' : 5,
     'description' : 'XYZ University description.',
-    'depends' : ['base','sale'],
+    'depends' : ['base','sale_management'],
     'data' : [
         'views/course_views.xml',
         'views/department_views.xml',
