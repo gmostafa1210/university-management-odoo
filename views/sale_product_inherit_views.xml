@@ -10,6 +10,10 @@
                 <field name='product_brand_ids'/>
                 <field name='dealer_name_ids'/>
             </xpath>
+            <xpath expr='//field[@name="default_code"]' position='attributes'>
+                <attribute name='required'>1</attribute>
+                <attribute name='string'>Product Reference</attribute>
+            </xpath>
         </field>
     </record>
 
