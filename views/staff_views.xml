@@ -16,6 +16,9 @@
         <field name='model'>uni.staff</field>
         <field name='arch' type='xml'>
             <form>
+                <header>
+                    <button string='Error Raise' type='object' name='test_user_error'/>
+                </header>
                 <sheet>
                     <group>
                         <group>

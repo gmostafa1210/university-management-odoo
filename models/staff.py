@@ -1,4 +1,5 @@
-from odoo import fields, models
+from odoo import fields, models, _
+from odoo.exceptions import UserError
 
 class UniStaff(models.Model):
     _name = 'uni.staff'
@@ -8,3 +9,7 @@ class UniStaff(models.Model):
     salary = fields.Float(string='Salary')
     department_ids = fields.Many2many('uni.department', string='Department')
     photo = fields.Binary(string='Photo', attachment=True)
+
+    def test_user_error(self):
+        raise UserError(_('Error Raised!'))
+        
