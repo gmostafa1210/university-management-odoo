@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='action_product_brand' model='ir.actions.act_window'>
+        <field name='name'>Product Brand</field>
+        <field name='res_model'>product.brand</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_product_brand' 
+        action='action_product_brand' 
+        name='Product Brand Menu'
+        parent='stock.menu_stock_config_settings'
+        sequence='101'/>
+
+    <record id='action_dealer_name' model='ir.actions.act_window'>
+        <field name='name'>Dealer Name</field>
+        <field name='res_model'>dealer.name</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem 
+        id='menu_dealer_name' 
+        action='action_dealer_name' 
+        name='Dealer Name Menu'
+        parent='stock.menu_stock_config_settings'
+        sequence='102'/>
+
+</odoo>
