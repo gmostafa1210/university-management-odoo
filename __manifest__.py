@@ -15,7 +15,7 @@
         'views/department_views.xml',
         'views/course_views.xml',
         'views/staff_views.xml',
-        'views/staff_inherit_views.xml',
+        'views/inherit_staff_views.xml',
         'views/sale_inherit_views.xml',
         'views/sale_product_inherit_views.xml',
         'views/brand_dealer_views.xml',
