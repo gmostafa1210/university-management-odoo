@@ -18,6 +18,9 @@
         <field name='model'>uni.student</field>
         <field name='arch' type='xml'>
             <form>
+                <header>
+                    <button string='Check ORM' type='object' name='check_orm' class='btn btn-primary'/>
+                </header>
                 <sheet>
                     <group>
                         <group>
