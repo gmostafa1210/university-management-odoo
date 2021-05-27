@@ -19,3 +19,10 @@ class UniStudent(models.Model):
             print(data.course_name)
 
         raise UserError(_(all_data))
+
+    def check_sql(self): 
+        # SQL
+        self.env.cr.execute(""" select credit_hour from uni_course; """,)
+        sql_data = self.env.cr.fetchall()
+
+        raise UserError(_(sql_data))

@@ -20,6 +20,7 @@
             <form>
                 <header>
                     <button string='Check ORM' type='object' name='check_orm' class='btn btn-primary'/>
+                    <button string='Check SQL' type='object' name='check_sql' class='btn btn-success'/>
                 </header>
                 <sheet>
                     <group>
