@@ -8,7 +8,7 @@ class UniStudent(models.Model):
     name = fields.Char(string='Student Name')
     stu_id_num = fields.Char(string='Student ID')
     department_id = fields.Many2one('uni.department', string='Department')
-    credit_earn = fields.Integer(string='Credit Earned')
+    credit_earn = fields.Integer(string='Credit Earned', compute='_get_credit')
     course_ids = fields.Many2many('uni.course', string='Courses')
     photo = fields.Binary(string="Photo", attachment=True)
 
@@ -26,3 +26,15 @@ class UniStudent(models.Model):
         sql_data = self.env.cr.fetchall()
 
         raise UserError(_(sql_data))
+
+    def calculate_credit(self):
+        total_credit = 0
+        all_data = self.env['uni.course'].search([('id','in',self.course_ids.ids)])
+        for data in all_data:
+            total_credit += data.credit_hour
+
+        return total_credit
+
+    def _get_credit(self):
+        for item in self:
+            item.credit_earn = item.calculate_credit()
