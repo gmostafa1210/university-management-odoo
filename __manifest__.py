@@ -6,7 +6,7 @@
     'description' : 'XYZ University description.',
     'depends' : ['base','sale_management','stock'],
     'data' : [
-        'security/hospital_security.xml',
+        'security/university_security.xml',
         'security/ir.model.access.csv',
 
         'views/university_views.xml',

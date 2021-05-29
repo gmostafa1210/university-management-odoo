@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='university_user_access_record' model='ir.module.category'>
+        <field name='name'>XYZ University</field>
+        <field name='sequence'>10</field>
+    </record>
+
+    <record id='group_university_user_access_record_genaral' model='res.groups'>
+        <field name='name'>Genaral User</field>
+        <field name='implied_ids' eval='[(4, ref("base.group_user"))]'/>
+        <field name='category_id' ref='university_management.university_user_access_record'/>
+        <field name='users' eval='[(4, ref("base.user_admin"))]'/>
+    </record>
+
+    <record id='group_university_user_access_record_admin' model='res.groups'>
+        <field name='name'>Admin User</field>
+        <field name='implied_ids' eval='[(4, ref("university_management.group_university_user_access_record_genaral"))]'/>
+        <field name='category_id' ref='university_management.university_user_access_record'/>
+        <field name='users' eval='[(4, ref("base.user_admin"))]'/>
+    </record>
+
+</odoo>
