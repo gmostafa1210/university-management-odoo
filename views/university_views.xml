@@ -9,6 +9,11 @@
         <field name='name'>Faculty</field>
         <field name='res_model'>uni.faculty</field>
         <field name='view_mode'>tree,form</field>
+        <field name='context'>
+            {
+                'search_default_faculty_high_salary':1,
+            }
+        </field>
     </record>
 
     <menuitem 
@@ -48,6 +53,11 @@
         <field name='name'>Staff</field>
         <field name='res_model'>uni.staff</field>
         <field name='view_mode'>tree,form</field>
+        <field name='context'>
+            {
+                'default_salary':20000
+            }
+        </field>
     </record>
 
     <menuitem 
