@@ -18,6 +18,9 @@ class UniFaculty(models.Model):
 
     course_ids = fields.Many2many('uni.course', string='Courses')
 
+    have_address = fields.Boolean(string='Have Address')
+    address = fields.Text(string='Address')
+
     def test_user_error(self):
         raise UserError(_('Error Raised!'))
 

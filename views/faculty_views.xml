@@ -34,6 +34,8 @@
                         <group>
                             <field name='course_ids' widget='many2many_tags'/>
                             <field name='photo' widget='image' class='oe_avatar'/>
+                            <field name='have_address'/>
+                            <field name='address' attrs='{"invisible":[("have_address","=",False)],"required":[("have_address","=",True)]}'/>
                         </group>
                     </group>
                 </sheet>
