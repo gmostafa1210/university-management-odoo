@@ -50,6 +50,9 @@
                 <field name='stu_id_num'/>
                 <field name='department_id'/>
                 <field name='credit_earn'/>
+
+                <!-- Group By -->
+                <filter string='Department' name='group_by_department_student' context='{"group_by":"department_id"}'/>
             </search>
         </field>
     </record>

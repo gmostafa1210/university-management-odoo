@@ -43,6 +43,9 @@
                 <field name='course_name'/>
                 <field name='credit_hour'/>
                 <field name='course_code'/>
+
+                <!-- Group By -->
+                <filter string='Credit' name='group_by_credit_course' context='{"group_by":"credit_hour"}'/>
             </search>
         </field>
     </record>
