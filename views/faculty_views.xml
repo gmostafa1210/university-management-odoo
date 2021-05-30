@@ -52,6 +52,11 @@
                 <field name='department_id'/>
                 <field name='designation'/>
                 <field name='salary'/>
+
+                <!-- Adding Filter -->
+                <filter string='High Salary' name='faculty_high_salary' domain='[("salary","&gt;=",50000)]'/>
+                <separator/>
+                <filter string='Low Salary' name='faculty_low_salary' domain='[("salary","&lt;",50000)]'/>
             </search>
         </field>
     </record>
