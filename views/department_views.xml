@@ -22,6 +22,7 @@
                     <group>
                         <field name='name'/>
                         <field name='budget'/>
+                        <field name='engr_dept'/>
                     </group>
 
                     <notebook>

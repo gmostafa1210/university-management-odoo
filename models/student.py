@@ -7,7 +7,7 @@ class UniStudent(models.Model):
 
     name = fields.Char(string='Student Name')
     stu_id_num = fields.Char(string='Student ID')
-    department_id = fields.Many2one('uni.department', string='Department')
+    department_id = fields.Many2one('uni.department', string='Department', domain=[('engr_dept','=',True)])
     credit_earn = fields.Integer(string='Credit Earned', compute='_get_credit')
     course_ids = fields.Many2many('uni.course', string='Courses')
     photo = fields.Binary(string="Photo", attachment=True)
