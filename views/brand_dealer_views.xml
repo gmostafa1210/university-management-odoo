@@ -9,6 +9,10 @@
             <xpath expr='//search' position='inside'>
                 <field name='product_brand_ids'/>
                 <field name='dealer_name_ids'/>
+
+                <!-- Adding Group by -->
+                <filter string='Product Brand' name='group_by_brand_product' context='{"group_by":"product_brand_ids"}'/>
+                <filter string='Dealer Name' name='group_by_dealer_product' context='{"group_by":"dealer_name_ids"}'/>
             </xpath>
         </field>
     </record>
