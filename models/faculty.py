@@ -1,4 +1,5 @@
 from odoo import api, models, fields, _
+from odoo.exceptions import UserError
 
 class UniFaculty(models.Model):
     _name = 'uni.faculty'
@@ -16,6 +17,9 @@ class UniFaculty(models.Model):
     photo = fields.Binary(string="Photo", attachment=True)
 
     course_ids = fields.Many2many('uni.course', string='Courses')
+
+    def test_user_error(self):
+        raise UserError(_('Error Raised!'))
 
     def full_name(self):
         first_name = ''
