@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='university_student_report' model='ir.actions.report'>
+        <field name='name'>Print Student Report</field>
+        <field name='model'>uni.student</field>
+        <field name='report_type'>qweb-html</field>
+        <field name='report_name'>university_management.university_student_report_document</field>
+        <field name='report_file'>university_management.university_student_report_document</field>
+    </record>
+
+    <template id='university_student_report_document'>
+        <t t-call='web.basic_layout'>
+            <div class='page'>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>

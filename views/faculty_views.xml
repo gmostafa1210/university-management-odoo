@@ -28,6 +28,7 @@
                             <field name='last_name'/>
                             <field name='name'/>
                             <field name='department_id'/>
+                            <field name='faculty_code'/>    
                             <field name='salary'/>
                             <field name='designation'/>
                         </group>

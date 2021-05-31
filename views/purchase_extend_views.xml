@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='view_inherit_purchase_extend' model='ir.ui.view'>
+        <field name='name'>purchase.order.purchase.extend.inherit</field>
+        <field name='model'>purchase.order</field>
+        <field name='inherit_id' ref='purchase.purchase_order_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr='//field[@name="partner_id"]' position='attributes'>
+                <attribute name='domain'>[('is_company','=',False)]</attribute>
+            </xpath>
+            <xpath expr='//field[@name="partner_ref"]' position='after'>
+                <field name='dealer_name_ids'/>
+            </xpath>
+            <xpath expr='//notebook/page/field[@name="order_line"]/tree/field[@name="name"]' position='after'>
+                <field name='product_brand_ids'/>
+            </xpath>
+            <xpath expr='//field[@name="product_id"]' position='attributes'>
+                <attribute name='domain'>[('dealer_name_ids','=',parent.dealer_name_ids)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

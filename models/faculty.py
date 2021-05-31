@@ -9,6 +9,7 @@ class UniFaculty(models.Model):
     last_name = fields.Char(string='Last Name')
     name = fields.Char(string='Full Name', compute='_get_full_name')
     department_id = fields.Many2one('uni.department', string='Department')
+    faculty_code = fields.Integer(string='Faculty Code')
     salary = fields.Float(String='Salary')
     designation = fields.Selection([('professor', 'Professor'), 
                                 ('lecturer', 'Lecturer'),
@@ -38,4 +39,33 @@ class UniFaculty(models.Model):
         for item in self:
             item.name = item.full_name()
 
+    # @api.onchange('faculty_code')
+    # def faculty_code_unique_check(self):
+    #     all_data = self.env['uni.faculty'].search([])
+    #     if self.faculty_code:
+    #         for data in all_data:
+    #             if self.faculty_code == data.faculty_code:
+    #                 raise UserError(_("Code already in use!"))
+    
+    # @api.model
+    # def create(self, values):
+    #     all_data = self.env['uni.faculty'].search([])
+    #     for data in all_data:
+    #         print('######')
+    #         print(data.faculty_code)
+    #         if values['faculty_code'] == data.faculty_code:
+    #             all_data = []
+    #             raise UserError(_("Code already in use!"))
+    #     return super(UniFaculty, self).create(values)
+
+    # def write(self, values):
+    #     all_data = self.env['uni.faculty'].search([])
+    #     if 'faculty_code' in values.keys():
+    #         for data in all_data:
+    #             print('******')
+    #             print(data.faculty_code)
+    #             if values['faculty_code'] == data.faculty_code:
+    #                 all_data = []
+    #                 raise UserError(_("Code already in use!"))
+    #     return super(UniFaculty, self).write(values)
     
