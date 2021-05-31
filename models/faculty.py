@@ -39,6 +39,36 @@ class UniFaculty(models.Model):
         for item in self:
             item.name = item.full_name()
 
+
+    # unique faculty code check (to be solve)
+
+    @api.onchange('faculty_code')
+    def onchange_faculty_code_unique_check(self):
+        all_code = self.env['uni.faculty'].search([])
+        if self.faculty_code:
+            for val in all_code:
+                if self.faculty_code == val.faculty_code:
+                    raise UserError(_("Code already exists!"))
+
+    def write(self, values):
+        all_codes = self.env ['uni.faculty'].search([('faculty_code', '=', values['faculty_code'])])
+        if 'faculty_code' in values.keys():
+            if all_codes:
+                raise UserError(_("Code already exists!"))
+            else:
+                return super(UniFaculty, self).write(values)
+
+    @api.model 
+    def create(self, values):
+        all_codes = self.env ['uni.faculty'].search([('faculty_code', '=', values['faculty_code'])])
+        if all_codes:
+            raise UserError(_("Code already exists!"))
+        else:
+            return super(UniFaculty, self).create(values)
+
+
+    # unique faculty code check (to be solve)
+
     # @api.onchange('faculty_code')
     # def faculty_code_unique_check(self):
     #     all_data = self.env['uni.faculty'].search([])
@@ -51,21 +81,21 @@ class UniFaculty(models.Model):
     # def create(self, values):
     #     all_data = self.env['uni.faculty'].search([])
     #     for data in all_data:
-    #         print('######')
+    #         print('########c1')
     #         print(data.faculty_code)
-    #         if values['faculty_code'] == data.faculty_code:
-    #             all_data = []
+    #         if data.faculty_code == values['faculty_code']:
     #             raise UserError(_("Code already in use!"))
+    #     print("########c2")
     #     return super(UniFaculty, self).create(values)
 
     # def write(self, values):
+    #     print("*******w1")
     #     all_data = self.env['uni.faculty'].search([])
     #     if 'faculty_code' in values.keys():
     #         for data in all_data:
-    #             print('******')
+    #             print('*******w2')
     #             print(data.faculty_code)
     #             if values['faculty_code'] == data.faculty_code:
-    #                 all_data = []
     #                 raise UserError(_("Code already in use!"))
     #     return super(UniFaculty, self).write(values)
     
