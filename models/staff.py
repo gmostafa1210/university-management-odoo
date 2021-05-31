@@ -3,8 +3,13 @@ from odoo import fields, models, _
 class UniStaff(models.Model):
     _name = 'uni.staff'
     _description = 'Staff Information'
+    _sql_constraints = [
+        ('staff_code_unique', 'unique(staff_code)', 'Code already exists!')
+    ]
+
 
     name = fields.Char(string='Staff Name')
+    staff_code = fields.Integer(string='Staff Code')
     salary = fields.Float(string='Salary')
     department_ids = fields.Many2many('uni.department', string='Department')
     photo = fields.Binary(string='Photo', attachment=True)

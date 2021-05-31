@@ -25,6 +25,7 @@
                     <group>
                         <group>
                             <field name='name'/>
+                            <field name='staff_code'/>
                             <field name='department_ids' widget='many2many_tags'/>
                             <field name='salary'/>
                         </group>
