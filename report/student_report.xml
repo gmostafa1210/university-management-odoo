@@ -13,10 +13,37 @@
 
     <template id='university_student_report_document'>
         <t t-call='web.html_container'>
-            <t t-call='web.external_layout'>
+            <t t-call='web.basic_layout'>
                 <div class='page'>
                     <t t-foreach='docs' t-as='doc'>
-                        <h1> <t t-esc='doc.name'/> </h1>
+                        <div class='text-center'>
+                            <h1> <t t-esc='doc.name'/> </h1>
+                        </div>
+                        <div class='offset-md-2 col-md-8 offset-md-2' style='margin-top:60px;'>
+                            <table class='table'>
+                                <tr>
+                                    <th>Serial</th>
+                                    <th>Course Name</th>
+                                    <th>Credit</th>
+                                    <th>Lab Info</th>
+                                </tr>
+                                <t t-set='sn' t-value='1'/>
+                                <t t-foreach='doc.course_ids' t-as='course'>
+                                    <tr>
+                                        <td><t t-esc='sn'/></td>
+                                        <td><t t-esc='course.course_name'/></td>
+                                        <td><t t-esc='course.credit_hour'/></td>
+                                        <t t-if='course.credit_hour == 4'>
+                                            <td>Have Lab</td>
+                                        </t>
+                                        <t t-else=''>
+                                            <td>No Lab</td>
+                                        </t>
+                                    </tr>
+                                    <t t-set='sn' t-value='sn + 1'/>
+                                </t>
+                            </table>
+                        </div>
                     </t>
                 </div>
             </t>
