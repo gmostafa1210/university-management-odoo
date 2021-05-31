@@ -12,13 +12,14 @@
     </record>
 
     <template id='university_student_report_document'>
-        <t t-call='web.basic_layout'>
-            <div class='page'>
-                hello
-            </div>
-            <div class='page'>
-                world
-            </div>
+        <t t-call='web.html_container'>
+            <t t-call='web.external_layout'>
+                <div class='page'>
+                    <t t-foreach='docs' t-as='doc'>
+                        <h1> <t t-esc='doc.name'/> </h1>
+                    </t>
+                </div>
+            </t>
         </t>
     </template>
 
