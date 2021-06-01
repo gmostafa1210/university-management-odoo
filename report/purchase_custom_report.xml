@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id='purchase_order_new_custom_report' model='ir.actions.report'>
+        <field name='name'>Purchase Order Custom Report</field>
+        <field name='model'>purchase.order</field>
+        <field name='report_type'>qweb-pdf</field>
+        <field name='report_name'>university_management.purchase_order_new_custom_report_document</field>
+        <field name='report_file'>university_management.purchase_order_new_custom_report_document</field>
+        <field name='binding_model_id' ref='purchase.model_purchase_order'/>
+        <field name='binding_type'>report</field>
+    </record>
+
+    <template id='purchase_order_new_custom_report_document'>
+        <t t-call='web.html_container'>
+            <t t-call='web.external_layout'>
+                <div class='page'>
+                    <t t-foreach='docs' t-as='doc'>
+                        <div>
+                            <h1>Purchase Order #<t t-esc='doc.name'/> </h1>
+                        </div>
+                        <div style='margin-top:30px;'> 
+                            <table class='offset-md-2 col-md-8 offset-md-2' >
+                                <tr>
+                                    <td><b>Vendor:</b></td>
+                                    <td><b>Confirmation Date:</b></td>
+                                </tr>
+                                <tr>
+                                    <td><t t-esc='doc.partner_id.name'/></td>
+                                    <td><t t-esc='doc.date_approve'/></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Purchase Representative:</b></td>
+                                    <td><b>Receipt Date:</b></td>
+                                </tr>
+                                <tr>
+                                    <td><t t-esc='doc.user_id.name'/></td>
+                                    <td><t t-esc='doc.date_planned'/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style='width:100%; margin-top:30px;'>
+                            <table class='table table-sm'>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Description</th>
+                                    <th>Brand</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th class='row justify-content-end'>Sub-Total</th>
+                                </tr>
+                                <t t-foreach='doc.order_line' t-as='line'>
+                                    <tr>
+                                        <td><t t-esc='line.product_id.name'/></td>
+                                        <td><t t-esc='line.name'/></td>
+                                        <td><t t-esc='line.product_brand_ids.product_brand'/></td>
+                                        <td><t t-esc='line.product_qty'/></td>
+                                        <td><t t-esc='line.price_unit'/></td>
+                                        <td class='row justify-content-end'><t t-esc='line.price_subtotal'/></td>
+                                    </tr>
+                                </t>
+                                <div>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><b>Total:</b></td>
+                                        <td class='row justify-content-end'><t t-esc='doc.amount_untaxed'/></td>
+                                    </tr>
+                                </div>
+                            </table>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

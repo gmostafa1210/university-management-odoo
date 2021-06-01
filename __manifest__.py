@@ -22,6 +22,7 @@
         'views/purchase_extend_views.xml',
 
         'report/student_report.xml',
+        'report/purchase_custom_report.xml',
     ],
     'installable' : True,
     'application' : True,
