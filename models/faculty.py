@@ -3,7 +3,7 @@ from odoo.exceptions import UserError
 
 class UniFaculty(models.Model):
     _name = 'uni.faculty'
-    _description = 'Faculty Information c'
+    _description = 'Faculty Information'
 
     first_name = fields.Char(string='First Name')
     last_name = fields.Char(string='Last Name')
