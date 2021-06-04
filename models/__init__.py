@@ -8,3 +8,4 @@ from . import sale_product_inherit
 from . import brand_dealer
 from . import inherit_staff
 from . import purchase_extend
+from . import purchase_filter

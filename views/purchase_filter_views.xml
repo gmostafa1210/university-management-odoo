@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='view_purchase_filter_wizard' model='ir.ui.view'>
+        <field name='name'>purchase.filter.custom.wizard</field>
+        <field name='model'>purchase.filter</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <field name='filter_purchase'/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name='get_custom_purchase_filter' string='Filter Now' type='object' class='btn btn-primary'/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id='action_purchase_filter_wizard' model='ir.actions.act_window'>
+        <field name='name'>Purchase Filter</field>
+        <field name='res_model'>purchase.filter</field>
+        <field name='view_mode'>form</field>
+        <field name='target'>new</field>
+    </record>
+
+    <menuitem 
+        id='menu_purchase_filter_wizard' 
+        parent='purchase.menu_purchase_root' 
+        action='action_purchase_filter_wizard'
+        name='Purchase Filter'
+        sequence='101'/>
+
+</odoo>

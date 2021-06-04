@@ -20,6 +20,7 @@
         'views/sale_product_inherit_views.xml',
         'views/brand_dealer_views.xml',
         'views/purchase_extend_views.xml',
+        'views/purchase_filter_views.xml',
 
         'report/student_report.xml',
         'report/purchase_custom_report.xml',
