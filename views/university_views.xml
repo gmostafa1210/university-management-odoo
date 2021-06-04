@@ -71,6 +71,7 @@
         <field name='name'>Course</field>
         <field name='res_model'>uni.course</field>
         <field name='view_mode'>tree,form</field>
+        <field name='domain'>[('credit_hour','=',4)]</field>
     </record>
 
     <menuitem 
