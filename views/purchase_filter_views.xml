@@ -9,6 +9,8 @@
                 <sheet>
                     <group>
                         <field name='filter_purchase'/>
+                        <field name='date_from'/>
+                        <field name='date_to'/>
                     </group>
                 </sheet>
                 <footer>
