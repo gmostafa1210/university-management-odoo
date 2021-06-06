@@ -37,9 +37,3 @@ access_admin_user_product_brand,access_admin_user_product_brand,model_product_br
 access_admin_user_dealer_name,access_admin_user_dealer_name,model_dealer_name,university_management.group_university_user_access_record_admin,1,1,1,1
 
 access_admin_user_purchase_filter,access_admin_user_purchase_filter,model_purchase_filter,university_management.group_university_user_access_record_admin,1,1,1,1
-
-
-
-
-
-
